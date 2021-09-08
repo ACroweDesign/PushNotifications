@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: Poppins;
+    text-align: center;
+    letter-spacing: .125em;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    background: linear-gradient(to top, #fb42c7, #973277);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    margin: 0;
+}
+
+.container {
+    margin: 1em;
+}
+
+.header img {
+    max-width: 60%;
+}
+
+.appbtns{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    justify-content: space-around;
+}
+
+.appbtn {
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: 1em;
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.125rem;
+    background-image: linear-gradient(-145deg, #fb42c7 30%, rgb(209, 83, 83), rgb(196, 118, 118));
+    position: relative;
+    cursor: pointer;
+    transition: all 460ms ease;
+}
+
+.appbtn p {
+    z-index: 10;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.appbtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, #fb42c7 30%, rgb(209, 83, 83), rgb(196, 118, 118));
+    transition: all 460ms ease;
+    opacity: 1;
+    box-shadow:  0px 0px 10px rgb(80, 73, 73);
+    border-radius: 12px;
+}
+
+.appbtn:hover::before {
+    opacity: 0;
+}
+
+.appbtn:hover {
+    box-shadow: inset 0px 0px 5px rgb(143, 128, 128), inset 0px 0px 45px rgb(56, 52, 52);
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.photo {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: .125em;
+    object-fit: cover;
+}
+
+.photo img {
+    width: 100%;
+}
+
+.goback {
+    background: #fb42c7;
+    position: fixed;
+    bottom: 15px;
+    left: -75px;
+    padding: 0;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.goback p {
+    margin-left: 100px;
+    padding-right: 1em;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 260ms ease;
+}
+
+.goback strong {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-right: .25em;
+}
+
+.goback:hover p {
+    color: white;
+}
+
